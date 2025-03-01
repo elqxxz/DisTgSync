@@ -35,7 +35,7 @@ fs.watch('src/data/channel.json', () => {
     watchingChannel = true;
 
     setTimeout(() => {
-        providedChannel = client.channels.cache.get(`${JSON.parse(fs.readFileSync('src/data/channel.json', 'utf-8')).id}`);
+        providedChannel = client.channels.cache.get(`${JSON.parse(fs.readFileSync('src/data/channel.json')).id}`);
     }, 50)
 
     setTimeout(() => {
@@ -47,8 +47,7 @@ fs.watch(`./../TgSync/src/logs/message.json`, () => {
     watching = true;
 
     setTimeout(() => {
-        const parsedMsg = JSON.parse(fs.readFileSync('./../TgSync/src/logs/message.json', 'utf-8'));
-        
+        const parsedMsg = JSON.parse(fs.readFileSync('./../TgSync/src/logs/message.json'));
         const msgAuthor = parsedMsg.from.first_name;
         let msgText;
         let caption;
@@ -82,17 +81,6 @@ fs.watch(`./../TgSync/src/logs/message.json`, () => {
         }
 
     }, 2000);
-    
-    // console.log(msgText, msgAuthor);
-    // console.log(messg.text())
-
-    // const Embed = new EmbedBuilder()
-    // .setAuthor({
-    //     name: `${messageAuthor}`
-    // })
-    // .setThumbnail(client.guilds.cache.get(process.env.GUILD_ID).iconURL())
-    // .setTimestamp()
-    // console.log(messageText)
 
     setTimeout(() => {
         watching = false;
