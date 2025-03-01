@@ -1,6 +1,15 @@
 # TgSync uses - telegraf, node-telegram-bot-api, axios, dotenv
+```
+npm i telegraf node-telegram-bot-api, axios, dotenv
+```
 # DsSync uses - discord.js, commandkit, dotenv
-
+```
+npm i discord.js commandkit dotenv
+```
+# also you can install ``nodemon`` if you want to add some changes and restart bot on file save
+```
+npm i nodemon
+```
 ## step 1.
 Change channel.json to smthng like this, but with any of your channels id ![where?](https://i.imgur.com/N81DnV7.png)
 ## step 2. 
